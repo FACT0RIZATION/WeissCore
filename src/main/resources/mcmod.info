@@ -1,0 +1,12 @@
+[
+{
+  "modid": "WeissCore",
+  "name": "WeissCore",
+  "version": "0.0.1",
+  "mcVersion": "1.7.10",
+  "authorList": [
+    "Weissmoon"
+  ],
+  "description": "Base Mod for my other mods."
+}
+]
