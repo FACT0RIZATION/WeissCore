@@ -18,6 +18,7 @@ import java.util.List;
 public class EntityThrowableCore extends EntityBulletCore {
 
     private int ticksInGround;
+    public boolean ice;
 
     public EntityThrowableCore(World world) {
         super(world);

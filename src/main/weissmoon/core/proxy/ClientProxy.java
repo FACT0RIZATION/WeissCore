@@ -23,4 +23,11 @@ public class ClientProxy extends CommonProxy {
     public void registerEventHandler() {
         MinecraftForge.EVENT_BUS.register(new BlockMaterialEvent());
     }
+
+    public void initRenderer(){
+        //MinecraftForgeClient.registerItemRenderer(ModItems.item, new DustRender());
+        //MinecraftForgeClient.registerItemRenderer(ModItems.food, new DustRender());
+    }
+
+    public void nanoSounds(int soundID){}
 }

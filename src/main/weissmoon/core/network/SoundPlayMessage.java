@@ -25,8 +25,8 @@ public class SoundPlayMessage implements IMessage, IMessageHandler<SoundPlayMess
 
     @Override
     public void toBytes(ByteBuf buf) {
-        byte[] noi = player.getBytes();
-        buf.writeBytes(noi);
+        String player1 = player;
+        NetworkHelper.writeString(player1, buf);
     }
 
     @Override

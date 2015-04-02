@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.oredict.OreDictionary;
 import org.lwjgl.input.Keyboard;
 import weissmoon.core.helper.MaterialStringHelper;
 
@@ -24,6 +25,9 @@ public class BlockMaterialEvent {
                 event.toolTip.add(ds.getUnformattedTextForChat());
                 event.toolTip.add(MaterialStringHelper.getMaterialString(((ItemBlock) item).field_150939_a.getMaterial()));
             }
+            //if(OreDictionary.OreDictionary.getOreID("ingotCopper")){
+            //    event.toolTip.add("weisscore.itscopper");
+            //}
         }
     }
 }

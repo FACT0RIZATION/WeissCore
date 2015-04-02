@@ -35,6 +35,7 @@ public class EntityBulletCore extends EntityThrowable implements IEntityAddition
     public double accelerationX;
     public double accelerationY;
     public double accelerationZ;
+    public boolean ice;
 
     public EntityBulletCore(World world){
         super(world);

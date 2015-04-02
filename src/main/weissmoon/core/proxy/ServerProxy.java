@@ -21,4 +21,11 @@ public class ServerProxy extends CommonProxy {
 
     @Override
     public void registerEventHandler() {}
+
+    public void initRenderer(){}
+
+    @Override
+    public void nanoSounds(int ID){
+
+    }
 }
