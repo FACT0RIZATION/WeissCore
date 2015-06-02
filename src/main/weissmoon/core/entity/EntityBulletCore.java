@@ -263,7 +263,6 @@ public class EntityBulletCore extends EntityThrowable implements IEntityAddition
             this.motionX *= (double)f2;
             this.motionY *= (double)f2;
             this.motionZ *= (double)f2;
-            this.worldObj.spawnParticle("smoke", this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D);
             this.setPosition(this.posX, this.posY, this.posZ);
         }
     }
@@ -303,9 +302,6 @@ public class EntityBulletCore extends EntityThrowable implements IEntityAddition
         compound.setString("ownerName", this.throwerName == null ? "" : this.throwerName);
     }
 
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
     @Override
     public void readEntityFromNBT(NBTTagCompound compound)
     {

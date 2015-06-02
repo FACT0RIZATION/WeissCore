@@ -204,11 +204,11 @@ public class NBTHelper
     /* ========================================  PAHIMAR END  =====================================*/
 
     public static void toggleBoolean(ItemStack itemStack, String keyName){
-        setBoolean(itemStack, keyName, getBoolean(itemStack, keyName) == true);
-        //if (getBoolean(itemStack, keyName) == true){
-        //    setBoolean(itemStack, keyName, false);
-        //}else{
-        //    setBoolean(itemStack, keyName, true);
-        //}
+        //setBoolean(itemStack, keyName, getBoolean(itemStack, keyName) == true);
+        if (getBoolean(itemStack, keyName) == true){
+            setBoolean(itemStack, keyName, false);
+        }else{
+            setBoolean(itemStack, keyName, true);
+        }
     }
 }

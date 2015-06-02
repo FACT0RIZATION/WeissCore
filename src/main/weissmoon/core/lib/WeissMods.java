@@ -2,7 +2,7 @@ package weissmoon.core.lib;
 
 public class WeissMods {
 
-    public static WeissMods instance = new WeissMods();
+    public static final WeissMods instance = new WeissMods();
 
     private boolean RWBY;
     private boolean GreenSolars;
@@ -12,6 +12,15 @@ public class WeissMods {
     private boolean Omnomnomnicon;
     private boolean NanoNailer;
     private boolean PotatoGun;
+
+    public static final int RWBYID = 100;
+    public static final int GREENSOLARSID = 200;
+    public static final int RANDANIID = 300;
+    public static final int WEISSCOREID = 400;
+    public static final int MUSICGUNID = 500;
+    public static final int OMNOMNOMNICONID = 600;
+    public static final int NANONAILERID = 700;
+    public static final int POTATOGUNID = 800;
 
     public boolean isRWBYLoaded(){
         return this.RWBY;
@@ -55,5 +64,8 @@ public class WeissMods {
     }
     public void setNanoNailer(){
         this.NanoNailer = true;
+    }
+    public void setPotatoGun(){
+        this.PotatoGun = true;
     }
 }

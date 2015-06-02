@@ -2,7 +2,7 @@ package weissmoon.core.helper;
 
 import java.util.Random;
 
-public  class RNGHelper {
+public class RNGHelper {
     public static Random random = new Random();
 
     public static int getRNGInt(){

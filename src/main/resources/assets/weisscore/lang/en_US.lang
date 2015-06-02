@@ -36,3 +36,5 @@ weisscore.material.cake=Cake
 weisscore.material.web=Web
 weisscore.material.piston=Piston
 weisscore.material.UNKNOWN=Unknown Material Type
+
+weisscore:itemDummy
