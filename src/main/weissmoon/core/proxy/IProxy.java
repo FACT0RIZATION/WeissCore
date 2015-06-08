@@ -1,6 +1,7 @@
 package weissmoon.core.proxy;
 
 import net.minecraft.entity.Entity;
+
 import weissmoon.core.client.sound.BoundSoundCore;
 
 public interface IProxy {

@@ -3,6 +3,7 @@ package weissmoon.core.network;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.relauncher.Side;
+
 import weissmoon.core.lib.ReferenceCore;
 
 public class PacketHandler {

@@ -3,9 +3,10 @@ package weissmoon.core.handler;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.config.Configuration;
-import weissmoon.core.lib.ReferenceCore;
 
 import java.io.File;
+
+import weissmoon.core.lib.ReferenceCore;
 
 public class ConfigurationHandler {
     public static Configuration configuration;

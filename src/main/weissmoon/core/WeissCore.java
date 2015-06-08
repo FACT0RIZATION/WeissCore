@@ -1,9 +1,7 @@
 package weissmoon.core;
 
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,7 +11,6 @@ import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 
 import java.io.File;
 
@@ -26,7 +23,7 @@ import weissmoon.core.proxy.CommonProxy;
 import weissmoon.core.command.TogglePVP;
 import weissmoon.core.lib.ReferenceCore;
 
-@Mod (modid = ReferenceCore.MOD_ID, name = ReferenceCore.MOD_NAME, version = ReferenceCore.VERSION, guiFactory = ReferenceCore.GUI_FACTORY_CLASS)
+@Mod (modid = ReferenceCore.MOD_ID, name = ReferenceCore.MOD_NAME, version = ReferenceCore.VERSION, dependencies = "required-after:Forge@[10.12.2.1121,)", guiFactory = ReferenceCore.GUI_FACTORY_CLASS)
 public class WeissCore {
     
     @Instance(ReferenceCore.MOD_ID)
@@ -42,11 +39,12 @@ public class WeissCore {
         public static Enchantment explosive;
     }
 
+    public void setDummyItem(){
+        instance.dummyInitialized = true;
+    }
+
     public void initDummyItem(){
-        if (!instance.dummyInitialized){
-            instance.dummyInitialized = true;
             GameRegistry.registerItem(dummyItem, Strings.DUMMY_ITEM_STRING);
-        }
     }
 
     @EventHandler
@@ -56,6 +54,9 @@ public class WeissCore {
    
     @EventHandler
     public void init(FMLInitializationEvent event){
+        if (instance.dummyInitialized){
+            instance.initDummyItem();
+        }
         MinecraftForge.EVENT_BUS.register(new EntityDrop());
         proxy.registerEventHandler();
     }

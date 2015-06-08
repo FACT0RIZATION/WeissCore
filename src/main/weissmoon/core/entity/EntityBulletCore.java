@@ -16,7 +16,6 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-
     /**
         Base class for linear projectiles.
         Similar to fireball.

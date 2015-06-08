@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.oredict.OreDictionary;
-import org.lwjgl.input.Keyboard;
-import weissmoon.core.helper.MaterialStringHelper;
 
+import org.lwjgl.input.Keyboard;
+
+import weissmoon.core.helper.MaterialStringHelper;
 
     /**
         Displays ItemBlock material and translates using .lang files

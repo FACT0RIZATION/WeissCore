@@ -2,6 +2,7 @@ package weissmoon.core.compat;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MovingObjectPosition;
+
 import weissmoon.RWBY.entity.glyphs.IceGlyph;
 
 public class RWBYCompat {

@@ -3,6 +3,7 @@ package weissmoon.core.proxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.common.MinecraftForge;
+
 import weissmoon.core.client.event.BlockMaterialEvent;
 import weissmoon.core.client.sound.BoundSoundCore;
 

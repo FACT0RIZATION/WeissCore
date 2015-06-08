@@ -1,14 +1,14 @@
 package weissmoon.core.client.event;
 
-import java.io.*;
-import java.net.*;
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ThreadDownloadImageData;
 import net.minecraft.client.renderer.texture.ITextureObject;
 import net.minecraft.util.ResourceLocation;
+
+import java.io.*;
+import java.net.*;
+import java.util.ArrayList;
+import java.util.List;
 
     /**
         Originally Tinkerers' Construct code but was adapted.
