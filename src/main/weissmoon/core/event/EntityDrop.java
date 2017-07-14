@@ -1,28 +1,23 @@
 package weissmoon.core.event;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import weissmoon.core.helper.RNGHelper;
 
-import static weissmoon.core.helper.RNGHelper.getRNGFloat;
-
-public class EntityDrop {
-
+public class EntityDrop{
     @SubscribeEvent
-    public void entityDrops(LivingDropsEvent event){
-        if(event.entityLiving instanceof IMob){
-            if(event.entityLiving instanceof EntitySpider){
-                if (getRNGFloat() > 0.99){
-                    ItemStack itemStack = new ItemStack(Items.string);
-                    itemStack.addEnchantment(Enchantment.silkTouch, 1);
-                    event.drops.add(new EntityItem(event.entityLiving.worldObj, event.entityLiving.posX, event.entityLiving.posY, event.entityLiving.posZ, itemStack));
-                }
-            }
+    public void entityDrops (LivingDropsEvent event){
+        if (((event.getEntityLiving() instanceof IMob)) &&
+                ((event.getEntityLiving() instanceof net.minecraft.entity.monster.EntitySpider)) &&
+                (RNGHelper.getRNGFloat() > 0.99D)){
+            ItemStack itemStack = new ItemStack(Items.STRING);
+            itemStack.addEnchantment(Enchantment.getEnchantmentByLocation("silk_touch"), 1);
+            event.getDrops().add(new EntityItem(event.getEntityLiving().worldObj, event.getEntityLiving().posX, event.getEntityLiving().posY, event.getEntityLiving().posZ, itemStack));
         }
     }
 }

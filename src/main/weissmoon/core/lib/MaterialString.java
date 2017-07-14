@@ -1,13 +1,11 @@
 package weissmoon.core.lib;
 
-import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.text.TextComponentTranslation;
 
-    /**
-        Hardcoded Vanilla material String vars.
-     */
-
-public class MaterialString {
-
+/**
+ * Hardcoded Vanilla material String vars.
+ */
+public class MaterialString{
     public static String AIR = "air";
     public static String GRASS = "grass";
     public static String GROUND = "ground";
@@ -42,15 +40,11 @@ public class MaterialString {
     public static String CAKE = "cake";
     public static String WEB = "web";
     public static String PISTON = "piston";
-
+    public static String BARRIER = "barrier";
     public static String UNKNOWN = "UNKNOWN";
 
-        /**
-            Returns translated String for tooltip
-         */
-    public static String getString(String string){
-        String name = string;
-        ChatComponentTranslation ds = new  ChatComponentTranslation("weisscore.material." + name);
-        return ds.getUnformattedTextForChat();
+    public static String getString (String string){
+        TextComponentTranslation ds = new TextComponentTranslation("weisscore.material." + string, new Object[0]);
+        return ds.getUnformattedText();
     }
 }

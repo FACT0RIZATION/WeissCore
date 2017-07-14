@@ -3,82 +3,115 @@ package weissmoon.core.helper;
 import net.minecraft.block.material.Material;
 import weissmoon.core.lib.MaterialString;
 
-    /**
-        List of Vanilla materials.
-        Currently hard coded.
-     */
-
-public class MaterialStringHelper {
-
-    public static String getMaterialString(Material material){
-        if (material == Material.air){
+/**
+ * List of Vanilla materials.
+ */
+public class MaterialStringHelper{
+    public static String getMaterialString (Material material){
+        if (material == Material.AIR){
             return MaterialString.getString(MaterialString.AIR);
-        }else if (material == Material.grass){
+        }
+        if (material == Material.GRASS){
             return MaterialString.getString(MaterialString.GRASS);
-        }else if (material == Material.ground){
+        }
+        if (material == Material.GROUND){
             return MaterialString.getString(MaterialString.GROUND);
-        }else if (material == Material.wood){
+        }
+        if (material == Material.WOOD){
             return MaterialString.getString(MaterialString.WOOD);
-        }else if (material == Material.rock){
+        }
+        if (material == Material.ROCK){
             return MaterialString.getString(MaterialString.ROCK);
-        }else if (material == Material.iron){
+        }
+        if (material == Material.IRON){
             return MaterialString.getString(MaterialString.IRON);
-        }else if (material == Material.anvil){
+        }
+        if (material == Material.ANVIL){
             return MaterialString.getString(MaterialString.ANVIL);
-        }else if (material == Material.water){
+        }
+        if (material == Material.WATER){
             return MaterialString.getString(MaterialString.WATER);
-        }else if (material == Material.lava){
+        }
+        if (material == Material.LAVA){
             return MaterialString.getString(MaterialString.LAVA);
-        }else if (material == Material.leaves){
+        }
+        if (material == Material.LEAVES){
             return MaterialString.getString(MaterialString.LEAVES);
-        }else if (material == Material.plants){
+        }
+        if (material == Material.PLANTS){
             return MaterialString.getString(MaterialString.PLANTS);
-        }else if (material == Material.vine){
+        }
+        if (material == Material.VINE){
             return MaterialString.getString(MaterialString.VINE);
-        }else if (material == Material.sponge){
+        }
+        if (material == Material.SPONGE){
             return MaterialString.getString(MaterialString.SPONGE);
-        }else if (material == Material.cloth){
+        }
+        if (material == Material.CLOTH){
             return MaterialString.getString(MaterialString.CLOTH);
-        }else if (material == Material.fire){
+        }
+        if (material == Material.FIRE){
             return MaterialString.getString(MaterialString.FIRE);
-        }else if (material == Material.sand){
+        }
+        if (material == Material.SAND){
             return MaterialString.getString(MaterialString.SAND);
-        }else if (material == Material.circuits){
+        }
+        if (material == Material.CIRCUITS){
             return MaterialString.getString(MaterialString.CIRCUITS);
-        }else if (material == Material.carpet){
+        }
+        if (material == Material.CARPET){
             return MaterialString.getString(MaterialString.CARPET);
-        }else if (material == Material.glass){
+        }
+        if (material == Material.GLASS){
             return MaterialString.getString(MaterialString.GLASS);
-        }else if (material == Material.redstoneLight){
+        }
+        if (material == Material.REDSTONE_LIGHT){
             return MaterialString.getString(MaterialString.REDSTONE_LIGHT);
-        }else if (material == Material.tnt){
+        }
+        if (material == Material.TNT){
             return MaterialString.getString(MaterialString.TNT);
-        }else if (material == Material.coral){
+        }
+        if (material == Material.CORAL){
             return MaterialString.getString(MaterialString.CORAL);
-        }else if (material == Material.ice){
+        }
+        if (material == Material.ICE){
             return MaterialString.getString(MaterialString.ICE);
-        }else if (material == Material.packedIce){
+        }
+        if (material == Material.PACKED_ICE){
             return MaterialString.getString(MaterialString.PACKED_ICE);
-        }else if (material == Material.snow){
+        }
+        if (material == Material.SNOW){
             return MaterialString.getString(MaterialString.SNOW);
-        }else if (material == Material.craftedSnow){
+        }
+        if (material == Material.CRAFTED_SNOW){
             return MaterialString.getString(MaterialString.CRAFTED_SNOW);
-        }else if (material == Material.cactus){
+        }
+        if (material == Material.CACTUS){
             return MaterialString.getString(MaterialString.CACTUS);
-        }else if (material == Material.clay){
+        }
+        if (material == Material.CLAY){
             return MaterialString.getString(MaterialString.CLAY);
-        }else if (material == Material.gourd){
+        }
+        if (material == Material.GOURD){
             return MaterialString.getString(MaterialString.GOURD);
-        }else if (material == Material.dragonEgg){
+        }
+        if (material == Material.DRAGON_EGG){
             return MaterialString.getString(MaterialString.DRAGON_EGG);
-        }else if (material == Material.portal){
+        }
+        if (material == Material.PORTAL){
             return MaterialString.getString(MaterialString.PORTAL);
-        }else if (material == Material.cake){
+        }
+        if (material == Material.CAKE){
             return MaterialString.getString(MaterialString.CAKE);
-        }else if (material == Material.web){
+        }
+        if (material == Material.WEB){
             return MaterialString.getString(MaterialString.WEB);
-        }else if (material == Material.piston){
+        }
+        if (material == Material.PISTON){
             return MaterialString.getString(MaterialString.PISTON);
+        }
+        if (material == Material.BARRIER){
+            return MaterialString.getString(MaterialString.BARRIER);
         }
         return MaterialString.getString(MaterialString.UNKNOWN);
     }

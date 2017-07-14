@@ -1,23 +1,17 @@
 package weissmoon.core.compat;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.RayTraceResult;
+import weissmoon.core.api.ICrystallizer;
 
-import weissmoon.RWBY.entity.glyphs.IceGlyph;
-
-public class RWBYCompat {
-
-    public static boolean isIceGlyph(MovingObjectPosition movingObjectPosition){
-        if(movingObjectPosition.entityHit instanceof IceGlyph){
-            return true;
-        }
-        return false;
+public class RWBYCompat{
+    public static boolean isEntityCrystallizer (RayTraceResult movingObjectPosition){
+        return (movingObjectPosition.entityHit != null && movingObjectPosition.entityHit instanceof ICrystallizer);
     }
 
-    public static boolean isIceGlyph(Entity entity){
-        if(entity instanceof IceGlyph){
-            return true;
-        }
-        return false;
+    public static boolean isIceGlyph (Entity entity){
+        return (entity instanceof ICrystallizer);
     }
+
+
 }

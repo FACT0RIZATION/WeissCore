@@ -37,4 +37,8 @@ weisscore.material.web=Web
 weisscore.material.piston=Piston
 weisscore.material.UNKNOWN=Unknown Material Type
 
-weisscore:itemDummy
+weisscore.wolfFood=Noms for wolves.
+
+item.weisscore:itemDummy.name=Dummy Item
+tt.item.weisscore:itemDummy=Dummy Item
+item.weisscore:comparingLamp.name=Comparing Lamp

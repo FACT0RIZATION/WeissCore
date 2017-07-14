@@ -1,28 +1,55 @@
 package weissmoon.core.client.sound;
 
-import net.minecraft.client.audio.ITickableSound;
-import net.minecraft.client.audio.PositionedSound;
+import net.minecraft.client.audio.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraftforge.fml.relauncher.*;
 
-
-    /**
-        Plays a sound that follows an entity.
-        Similar to minecart sound.
-     */
-public abstract class BoundSoundCore extends PositionedSound implements ITickableSound {
-
+/**
+ * Plays a sound that follows an entity.
+ * Similar to minecart sound.
+ */
+@SideOnly(Side.CLIENT)
+public class BoundSoundCore extends PositionedSound implements ITickableSound{
     protected Entity entity;
-    protected boolean isDone;
+    protected boolean isDone = false;
 
-    public BoundSoundCore(ResourceLocation p_i45103_1_, Entity entity) {
-        super(p_i45103_1_);
+    public BoundSoundCore (ResourceLocation p_i45103_1_, SoundCategory category, Entity entity, float loudness, float pitch){
+        super(p_i45103_1_, category);
         this.entity = entity;
-        this.field_147663_c = 1;
-        this.field_147665_h = 0;
+        this.pitch = 1.0F;
+        this.volume = loudness;
+        this.pitch = pitch;
     }
 
-    protected BoundSoundCore(ResourceLocation p_i45103_1_) {
-        super(p_i45103_1_);
+    public BoundSoundCore (ResourceLocation p_i45103_1_, SoundCategory category){
+        super(p_i45103_1_, category);
+    }
+
+
+    @Override
+    public float getXPosF(){
+        return (float)this.entity.posX;
+    }
+
+    @Override
+    public float getYPosF(){
+        return (float)this.entity.posY;
+    }
+
+    @Override
+    public float getZPosF(){
+        return (float)this.entity.posZ;
+    }
+
+
+    @Override
+    public boolean isDonePlaying (){
+        return this.isDone;
+    }
+
+    @Override
+    public void update (){
     }
 }
